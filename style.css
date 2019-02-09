@@ -49,6 +49,10 @@ p{
 .line1{
     top: 5rem;
     font-size: 3rem;
+    font-weight: 600;
+}
+.line1::after{
+    content: ':';
 }
 .line2{
     top: 7rem;
