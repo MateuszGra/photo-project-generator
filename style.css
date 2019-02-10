@@ -4,7 +4,7 @@ html{
 }
 body{
     background: #1352a2;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Play', sans-serif;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -18,7 +18,7 @@ button{
 	border-radius: 10%;
     cursor: pointer;
     margin: 0 auto;
-    top: 40vh;
+    top: 40rem;
     position: relative;
     border: 0.2rem white solid;
 }
@@ -44,27 +44,46 @@ p{
     color: #ffd464;
     font-size: 2rem;
     animation: left 0.5s;
+    animation: show 1s;
     text-align: center;
 }
 .line1{
-    top: 5rem;
+    top: 0;
     font-size: 3rem;
-    font-weight: 600;
+    font-weight: 700;
 }
 .line1::after{
     content: ':';
 }
 .line2{
-    top: 7rem;
-}
-.line3{
-    top: 9rem;
-}
-.line4{
-    top:11rem;
+    top: 2rem;
+    line-height: 2.5rem;
+    padding-right: 30vw;
+    padding-left: 30vw;
 }
 
 @keyframes rotate {
     0% { transform: rotate(0deg);}
     100% { transform: rotate(360deg);}
+}
+@keyframes show {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+
+@media only screen and (max-width: 750px){
+    .line2{
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+}
+@media only screen and (max-height: 600px){
+    button{
+        top: 70vh;
+    }
+}
+@media only screen and (max-height: 450px){
+    button{
+        top: 40rem;
+    }
 }

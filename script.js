@@ -1,55 +1,63 @@
 (function() {
     const button = document.querySelector('button');
-    const lines = [
-        document.querySelector('.line1'),
-        document.querySelector('.line2'),
-        document.querySelector('.line3'),
-        document.querySelector('.line4'),
-    ];
-    const title = [
+    const body = document.querySelector('body');
+    const lines = [];
+    const secions = [
+    [
         'Pewność Siebie',
         'Ukryci kolarze',
         'Zeusi Mokotowa',
         'Katowice w ogniu',
-    ];
-    const goal = [
-        'W tym projekcie postanowiłem pokazać to czego nie widac na na zewnątrz.',
+        'Niedzielni Fotografowie',
+    ],
+    [
+        'W tym projekcie postanowiłem pokazać to czego nie widać na zewnątrz.',
         'Środowiska alternatywne są mało przystępne przy pierwszym spotkaniu.',
-    ];
-    const emotions = [
+        'Projekt ma na celu pokazanie, że w każdym człowieku można odnaleźć coś ciekawego.',
+        'Projekt to pewnego rodzaju manifest, sprzeciw dyskryminacji środowiska.',
+        'W projekcie pokazuję przepmiany społeczne następujące po roku 89.',
+        'To przekrój przez środowisko, pokazuje moje wieloletnie obserwacje grupy społecznej.',
+    ],
+    [
         'Zdjęcia skupiają się na dumie i pewności siebie.',
         'Zdjęcia pokazują jak bardzo zmieniamy się jako naród.',
-    ];
-    const message = [
+    ],
+    [
         'Chciałbym aby moja praca była inspiracją dla wszystkich norwegów.',
         'Chciałbym dotrzeć do wszystkich wrażliwych chłopców.',
+    ],
     ];
-    function lottery (section , line){
+    function lottery(number){
         let draw;
-        draw = Math.random() * section.length;
+        draw = Math.random() * secions[number].length;
         draw = Math.floor(draw);
 
-        lines[line].textContent = section[draw];
+        return secions[number][draw];
+    }
+    function Crate(){
+       lines[0] = document.createElement('p');
+       body.appendChild(lines[0]);
+       lines[0].textContent = lottery(0);
+       lines[0].classList.add('line1');
+
+       lines[1] = document.createElement('p');
+       body.appendChild(lines[1]);
+       lines[1].classList.add('line2');
+       lines[1].textContent = lottery(1) + ' ' + lottery(2) + ' ' + lottery(3);
     }
 
-    lottery(title, 0);
-    lottery(goal, 1);
-    lottery(emotions, 2);
-    lottery(message, 3);
-
+    Crate();
     button.addEventListener("click", function(e) { 
         button.classList.add('animate');
-        lottery(title, 0);
-        lottery(goal, 1);
-        lottery(emotions, 2);
-        lottery(message, 3);
+        body.removeChild(lines[0]);
+        body.removeChild(lines[1]);
+        Crate();
     },false)
     button.addEventListener("touch", function(e) { 
         button.classList.add('animate');
-        lottery(title, 0);
-        lottery(goal, 1);
-        lottery(emotions, 2);
-        lottery(message, 3);
+        body.removeChild(lines[0]);
+        body.removeChild(lines[1]);
+        Crate()
     },false)
     button.addEventListener("animationend", function(e) { 
         button.classList.remove('animate');
