@@ -27,8 +27,8 @@ button::after{
     display: block;
     position: relative;
     margin: 0 auto;
-    width: 90%;
-    height: 90%;
+    width: 80%;
+    height: 80%;
     background: url(img/refresh.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -49,7 +49,8 @@ p{
     font-weight: 700;
 }
 .line1::after{
-    content: ' :';
+    content: ':';
+    color: #f26963;
 }
 .line2{
     font-size: 2rem;
