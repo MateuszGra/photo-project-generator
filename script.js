@@ -11,7 +11,7 @@
         'Niedzielni Fotografowie',
     ],
     [
-        'W tym projekcie postanowiłem pokazać to czego nie widać na zewnątrz.',
+        'W tym projekcie postanowiłem pokazać to, czego nie widać na zewnątrz.',
         'Środowiska alternatywne są mało przystępne przy pierwszym spotkaniu.',
         'Projekt ma na celu pokazanie, że w każdym człowieku można odnaleźć coś ciekawego.',
         'Projekt to pewnego rodzaju manifest, sprzeciw dyskryminacji środowiska.',
@@ -21,6 +21,8 @@
     [
         'Zdjęcia skupiają się na dumie i pewności siebie.',
         'Zdjęcia pokazują jak bardzo zmieniamy się jako naród.',
+        'Zdjęcia odkrywają w odbiorcy głęboko skrywane uczucia.',
+        'Fotografie nacechowane są silnymi emocjami.',
     ],
     [
         'Chciałbym aby moja praca była inspiracją dla wszystkich norwegów.',
