@@ -5,7 +5,7 @@
     const secions = [
     [
         'Pewność Siebie',
-        'Ukryci kolarze',
+        'Ukryci Kolarze',
         'Zeusi Mokotowa',
         'Katowice w ogniu',
         'Niedzielni Fotografowie',
