@@ -41,16 +41,15 @@ p{
     position: relative;
     margin: 0 auto;
     color: #ffd464;
-    animation: left 0.5s;
-    animation: show 1s;
     text-align: center;
+    animation: show 1s;
 }
 .line1{
     font-size: 3rem;
     font-weight: 700;
 }
 .line1::after{
-    content: ':';
+    content: ' :';
 }
 .line2{
     font-size: 2rem;

@@ -42,10 +42,10 @@
        lines[0].textContent = lottery(0);
        lines[0].classList.add('line1');
 
-       lines[1] = document.createElement('p');
-       body.appendChild(lines[1]);
-       lines[1].classList.add('line2');
-       lines[1].textContent = lottery(1) + ' ' + lottery(2) + ' ' + lottery(3);
+        lines[1] = document.createElement('p');
+        body.appendChild(lines[1]);
+        lines[1].classList.add('line2');
+        lines[1].textContent = lottery(1) + ' ' + lottery(2) + ' ' + lottery(3);
     }
 
     Crate();
