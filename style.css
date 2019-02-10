@@ -50,7 +50,6 @@ p{
 }
 .line1::after{
     content: ':';
-    color: #f26963;
 }
 .line2{
     font-size: 2rem;
