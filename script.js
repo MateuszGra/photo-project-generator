@@ -9,6 +9,7 @@
         'Zeusi Mokotowa',
         'Katowice w ogniu',
         'Niedzielni Fotografowie',
+        'Plaże Mielna',
     ],
     [
         'W tym projekcie postanowiłem pokazać to, czego nie widać na zewnątrz.',
@@ -39,8 +40,8 @@
     function Crate(){
        lines[0] = document.createElement('p');
        body.appendChild(lines[0]);
-       lines[0].textContent = lottery(0);
        lines[0].classList.add('line1');
+       lines[0].textContent = lottery(0);
 
         lines[1] = document.createElement('p');
         body.appendChild(lines[1]);
