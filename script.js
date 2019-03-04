@@ -1,6 +1,7 @@
 (function() {
     const button = document.querySelector('button');
-    const body = document.querySelector('body');
+    const content = document.querySelector('.content');
+    const photoContent = document.querySelector('.photoContent')
     const lines = [];
     const secions = [
     [
@@ -29,7 +30,16 @@
         'Chciałbym aby moja praca była inspiracją dla wszystkich norwegów.',
         'Chciałbym dotrzeć do wszystkich wrażliwych chłopców.',
     ],
+    [
+        'img/1.jpg',
+        'img/2.jpg',
+        'img/3.jpg',
+        'img/4.jpg',
+        'img/5.jpg',
+        'img/6.jpg',
+    ],
     ];
+    
     function lottery(number){
         let draw;
         draw = Math.random() * secions[number].length;
@@ -39,27 +49,29 @@
     }
     function Crate(){
        lines[0] = document.createElement('p');
-       body.appendChild(lines[0]);
+       content.appendChild(lines[0]);
        lines[0].classList.add('line1');
        lines[0].textContent = lottery(0);
 
         lines[1] = document.createElement('p');
-        body.appendChild(lines[1]);
+        content.appendChild(lines[1]);
         lines[1].classList.add('line2');
         lines[1].textContent = lottery(1) + ' ' + lottery(2) + ' ' + lottery(3);
+
+        photoContent.src = lottery(4);
     }
 
     Crate();
     button.addEventListener("click", function(e) { 
         button.classList.add('animate');
-        body.removeChild(lines[0]);
-        body.removeChild(lines[1]);
+        content.removeChild(lines[0]);
+        content.removeChild(lines[1]);
         Crate();
     },false)
     button.addEventListener("touch", function(e) { 
         button.classList.add('animate');
-        body.removeChild(lines[0]);
-        body.removeChild(lines[1]);
+        content.removeChild(lines[0]);
+        content.removeChild(lines[1]);
         Crate()
     },false)
     button.addEventListener("animationend", function(e) { 
