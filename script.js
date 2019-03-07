@@ -1,5 +1,5 @@
 (function() {
-    const button = document.querySelector('button');
+    const button = document.querySelector('.start');
     const content = document.querySelector('.content');
     const photoContent = document.querySelector('.photoContent')
     const lines = [];

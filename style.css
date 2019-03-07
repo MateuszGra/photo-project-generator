@@ -5,8 +5,12 @@ html{
 body{
     font-family: 'Play', sans-serif;
 }
+button{
+    cursor: pointer;
+}
 nav{
-    display: block;
+    display: flex;
+    align-items: center;
     position: fixed;
     height: 10vh;
     min-height: 6rem;
@@ -15,29 +19,117 @@ nav{
     background: white;
     z-index: 999;
 }
+.logo{
+    height: 70%;
+    margin-left: 1.5rem;
+}
+.name{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-left: 1rem;
+}
+.payment{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+    text-align: center;
+    color: #29475f;
+    margin: 2rem 0 1.1rem 0;
+}
+h2{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    color: #29475f;
+    margin: 0 auto 1.1rem auto;
+    line-height: 2rem;
+    width: 90%;
+}
+h3{
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #c7b29b;
+    text-align: center;
+    margin: 0 0 1.5rem 0;
+}
+h4{
+    font-size: 2rem;
+    font-weight: 500;
+    color: #457393;
+    text-align: center;
+    margin: 0 0 1.5rem 0;
+}
+ul{
+    box-shadow: 0.1rem 0.1rem 0.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1.7rem;
+}
+li{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0.2rem;
+}
+li::before{
+    content: '';
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    position: relative;
+    top: 0.4rem;
+    margin: 0.3rem 1rem 0 0;
+}
+.yes::before{
+    background: url(img/yes.svg);
+    background-size: contain;
+}
+.no::before{
+    background: url(img/no.svg);
+    background-size: contain;
+}
+.buy{
+    background: #2f88a7;
+    border: 0.1rem #457393 solid;
+    width: 80%;
+    border-radius: 1rem;
+    height: 3rem;
+    font-family: 'Play', sans-serif;
+    font-weight: 600;
+    color: #c7b29b;
+    margin: 2rem 0 0 2.5rem;
+}
 .content{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     position: relative;
 }
 .photoContent{
-    width: 100%;
+    width: 36%;
     margin: 0 auto;
-    position: absolute;
+    order: 1;
 }
-button{
+.start{
     width: 6rem;
     height: 6rem;
     display: block;
     background: #457393;
 	border-radius: 10%;
     cursor: pointer;
-    margin: 0 auto;
-    top: 40rem;
     position: relative;
     border: 0.2rem #29475f solid;
+    order: 4;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
 }
-button::after{
+.start::after{
     content: '';
     display: block;
     position: relative;
@@ -51,18 +143,16 @@ button::after{
 .animate::after{
     animation: rotate 0.5s;
 }
-p{
-    display: block;
-    position: relative;
-    margin: 6vh auto;
-    color: white;
-    text-align: center;
-    animation: show 1s;
-    text-shadow: black 0.1rem 0.1rem 0.2rem;
-}
 .line1{
     font-size: 3rem;
     font-weight: 700;
+    position: absolute;
+    color: white;
+    top: 18rem;
+    order: 2;
+    text-shadow: 0.3rem 0.3rem 0.5rem black;
+    animation: show 1s;
+    text-align: center;
 }
 .line1::after{
     content: ':';
@@ -70,10 +160,30 @@ p{
 .line2{
     font-size: 2rem;
     line-height: 2.5rem;
-    padding-right: 30vw;
-    padding-left: 30vw;
-    margin-top: 1.5rem;
     font-weight: 600;
+    order: 3;
+    height: 18rem;
+    margin-top: 3rem;
+    animation: show 1s;
+    text-align: center;
+    color: black;
+}
+.portrait{
+    height: 10rem;
+    width: 10rem;
+    margin: 2rem;
+    margin: 1rem 0 2rem 0;
+}
+.team{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.person{
+    width: 80%;
+    text-align: left;
+    font-size: 1.2rem;
+    margin: 0 0 2rem 0;
 }
 
 @keyframes rotate {
@@ -86,22 +196,20 @@ p{
 }
 
 @media only screen and (max-width: 750px){
+    nav{
+        height: 6rem;
+    }
     .line1{
         font-size: 2.8rem;
     }
     .line2{
         font-size: 1.8rem;
-        padding-right: 1.5rem;
-        padding-left: 1.5rem;
+        width: 90%;
     }
-}
-@media only screen and (max-height: 600px){
-    button{
-        top: 70vh;
+    .photoContent{
+        width: 100%;
     }
-}
-@media only screen and (max-height: 450px){
-    button{
-        top: 40rem;
+    .payment{
+        flex-direction: column;
     }
 }
