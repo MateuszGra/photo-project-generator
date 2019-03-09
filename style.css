@@ -171,19 +171,48 @@ li::before{
 .portrait{
     height: 10rem;
     width: 10rem;
-    margin: 2rem;
-    margin: 1rem 0 2rem 0;
+    margin: 2.5rem 2rem 2rem 0;
 }
 .team{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin: 4rem 0 0 0;
 }
 .person{
-    width: 80%;
-    text-align: left;
-    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     margin: 0 0 2rem 0;
+}
+.about{
+    color: #29475f;
+    text-align: left;
+    font-size: 1.5rem;
+    width: 60%;
+    line-height: 2rem;
+}
+.instagram{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: #29475f;
+}
+.instagram:hover{
+    color: #2f88a7;
+}
+.instagram::after{
+    content: '';
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 0 0 0.3rem;
+    background: url(img/instagram.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 @keyframes rotate {
