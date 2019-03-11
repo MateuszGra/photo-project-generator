@@ -11,6 +11,8 @@ button{
 nav{
     display: flex;
     align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
     position: fixed;
     height: 10vh;
     min-height: 6rem;
@@ -20,13 +22,74 @@ nav{
     z-index: 999;
 }
 .logo{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.image{
     height: 70%;
-    margin-left: 1.5rem;
+    margin: 0 0 0 1.5rem;
 }
 .name{
     font-size: 2rem;
     font-weight: 600;
-    margin-left: 1rem;
+    margin: 0 0 0 0.5rem;
+}
+.hamburger{
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    margin: 0 1.5rem 0 0;
+}
+.hamburger::after, .hamburger::before{
+    content: '';
+    display: block;
+    width: 4rem;
+    height: 0.5rem;
+    background: black;
+    position: absolute;
+    transition: 0.5s;
+}
+.hamburger::after{
+   top: 35%
+}
+.hamburger::before{
+    top: 55%;
+}
+.clouse::after{
+    transform: rotate(225deg);
+    top: 45%;
+}
+.clouse::before{
+    transform: rotate(-225deg);
+    top: 45%;
+}
+.background{
+    display: none;
+}
+.show{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    background: white;
+    opacity: 0.9;
+    right: 0;
+    top: 95%;
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding: 2rem;
+    border-radius: 1rem;
+    animation: slide 0.4s;
+}
+.backgroundEl{
+    margin: 1rem;
+    text-decoration: none;
+    color: black;
+}
+.backgroundEl:hover{
+    color: #457393;
 }
 .payment{
     display: flex;
@@ -267,6 +330,10 @@ textarea{
 @keyframes show {
     0% { opacity: 0;}
     100% { opacity: 1;}
+}
+@keyframes slide {
+    0% { right: -50rem;}
+    100% { right: 0rem;}
 }
 
 @media only screen and (max-width: 750px){

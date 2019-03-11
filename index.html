@@ -11,14 +11,24 @@
 </head>
 <body>
     <nav>
-        <img class="logo" src="img/logo.svg">
-        <figure class="name">GPF</figure> 
+        <div class="logo">
+            <img class="image" src="img/logo.svg">
+            <figure class="name">GPF</figure>
+        </div>
+        <div class="hamburger">
+            <div class="background">
+                <a href="#gen" class="backgroundEl">Generator</a>
+                <a href="#pay" class="backgroundEl">Płatności</a>
+                <a href="#team" class="backgroundEl">Zespół</a>
+                <a href="#contact" class="backgroundEl">Kontakt</a>
+            </div>
+        </div> 
     </nav>
-    <section class="content">
+    <section id="gen" class="content">
         <img class="photoContent">
         <button class="start"></button>
     </section>
-    <h1>Płatności</h1>
+    <h1 id="pay">Płatności</h1>
     <h2>Przygotowaliśmy specjalnie dla Ciebie, do wyboru, jeden z trzech pakietów dostosowanych do twoich potrzeb:</h2>
     <section class="payment">
         <ul class="standard">
@@ -52,7 +62,7 @@
             <button class="buy">KUP TERAZ</button>
         </ul>
     </section>
-    <h1>Zespół</h1>
+    <h1 id="team">Zespół</h1>
     <h2>Poznaj zespół pracujący nad projektem:</h2>
     <section class="team">
             <div class="person">
@@ -84,7 +94,7 @@
                 </p>
             </div>
     </section>
-    <section class="contact">
+    <section id="contact" class="contact">
         <h1>Napisz do nas.</h1>
         <form>
             <label for="name" class="name2">Imię</label>

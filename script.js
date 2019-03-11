@@ -1,4 +1,7 @@
 (function() {
+    const hamburger = document.querySelector('.hamburger');
+    const bacground = document.querySelector('.background');
+
     const button = document.querySelector('.start');
     const content = document.querySelector('.content');
     const photoContent = document.querySelector('.photoContent')
@@ -17,7 +20,7 @@
         'Środowiska alternatywne są mało przystępne przy pierwszym spotkaniu.',
         'Projekt ma na celu pokazanie, że w każdym człowieku można odnaleźć coś ciekawego.',
         'Projekt to pewnego rodzaju manifest, sprzeciw dyskryminacji środowiska.',
-        'W projekcie pokazuję przepmiany społeczne następujące po roku 89.',
+        'W projekcie pokazuję przemiany społeczne następujące po roku 89.',
         'To przekrój przez środowisko, pokazuje moje wieloletnie obserwacje grupy społecznej.',
     ],
     [
@@ -77,6 +80,14 @@
     button.addEventListener("animationend", function(e) { 
         button.classList.remove('animate');
     },false)
-
+//menu
+    hamburger.addEventListener("click", function(e) { 
+        hamburger.classList.toggle('clouse');
+        bacground.classList.toggle('show');
+    },false)
+    hamburger.addEventListener("touch", function(e) { 
+        hamburger.classList.toggle('clouse');
+        bacground.classList.toggle('show');
+    },false)
 
 })();
