@@ -1,6 +1,7 @@
 (function() {
     const hamburger = document.querySelector('.hamburger');
-    const bacground = document.querySelector('.background');
+    const background = document.querySelector('.background');
+    const body = document.querySelector("body");
 
     const button = document.querySelector('.start');
     const content = document.querySelector('.content');
@@ -81,13 +82,34 @@
         button.classList.remove('animate');
     },false)
 //menu
-    hamburger.addEventListener("click", function(e) { 
+    hamburger.addEventListener("click", function(e) {
+        e.stopPropagation(); 
         hamburger.classList.toggle('clouse');
-        bacground.classList.toggle('show');
+        background.classList.toggle('show');
     },false)
-    hamburger.addEventListener("touch", function(e) { 
+    background.addEventListener("click", function(e) {
+        e.stopPropagation(); 
+        hamburger.classList.add('clouse');
+        background.classList.add('show');
+    },false)
+    body.addEventListener("click", function(e) { 
+        hamburger.classList.remove('clouse');
+        background.classList.remove('show');
+    },false)
+
+    hamburger.addEventListener("touch", function(e) {
+        e.stopPropagation(); 
         hamburger.classList.toggle('clouse');
-        bacground.classList.toggle('show');
+        background.classList.toggle('show');
+    },false)
+    background.addEventListener("touch", function(e) {
+        e.stopPropagation(); 
+        hamburger.classList.add('clouse');
+        background.classList.add('show');
+    },false)
+    body.addEventListener("touch", function(e) { 
+        hamburger.classList.remove('clouse');
+        background.classList.remove('show');
     },false)
  //scroll
  $(document).ready(function() {
