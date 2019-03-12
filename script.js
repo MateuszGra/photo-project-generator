@@ -89,5 +89,34 @@
         hamburger.classList.toggle('clouse');
         bacground.classList.toggle('show');
     },false)
+ //scroll
+ $(document).ready(function() {
+    $('a[href^="#"]').on('click', function(event) {
+    
+    let target = $( $(this).attr('href') );
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 500);
+    }
+    });   
+});
+
+$(document).ready(function() {
+    $('a[href^="#"]').on('touch', function(event) {
+    
+    let target = $( $(this).attr('href') );
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 500);
+    }
+    });   
+});
+
 
 })();

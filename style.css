@@ -26,6 +26,7 @@ nav{
     display: flex;
     flex-direction: row;
     align-items: center;
+    text-decoration: none;
 }
 .image{
     height: 70%;
@@ -35,6 +36,7 @@ nav{
     font-size: 2rem;
     font-weight: 600;
     margin: 0 0 0 0.5rem;
+    color: black;
 }
 .hamburger{
     display: block;
@@ -300,6 +302,7 @@ input, textarea{
     height: 2.5rem;
     border-radius: 1rem;
     border: 0.2rem #c7b29b solid;
+    font-family: 'Play', sans-serif;
 }
 label{
     font-weight: 500;
@@ -309,7 +312,7 @@ label{
     align-self: center;
 }
 textarea{
-    height: 7rem;
+    height: 12rem;
     resize: none;
 }
 .submit{
