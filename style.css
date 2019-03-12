@@ -68,22 +68,22 @@ nav{
     top: 45%;
 }
 .background{
-    display: none;
-}
-.show{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     position: absolute;
     background: white;
     opacity: 0.9;
-    right: 0;
-    top: 95%;
+    top: 90%;
     font-size: 2.5rem;
     font-weight: 500;
     padding: 2rem;
     border-radius: 1rem;
-    animation: slide 0.4s;
+    right: -50rem;
+    transition: 0.4s;
+}
+.show{
+    right: 0;
 }
 .backgroundEl{
     margin: 1rem;
@@ -334,12 +334,7 @@ textarea{
     0% { opacity: 0;}
     100% { opacity: 1;}
 }
-@keyframes slide {
-    0% { right: -50rem;}
-    100% { right: 0rem;}
-}
-
-@media only screen and (max-width: 750px){
+@media only screen and (max-width: 850px){
     nav{
         height: 6rem;
     }

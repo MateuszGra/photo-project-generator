@@ -111,6 +111,7 @@
         hamburger.classList.remove('clouse');
         background.classList.remove('show');
     },false)
+
  //scroll
  $(document).ready(function() {
     $('a[href^="#"]').on('click', function(event) {
