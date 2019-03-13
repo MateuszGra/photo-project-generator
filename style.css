@@ -5,10 +5,16 @@ html{
 body{
     font-family: 'Play', sans-serif;
 }
+.before{
+    display: block;
+    height: 10vh;
+    min-height: 6rem;
+}
 button{
     cursor: pointer;
     background: #457393;
     transition: 0.3s;
+    border: 0.1rem #29475f solid;
 }
 button:hover{    
     background: #2f88a7;
@@ -65,7 +71,7 @@ h1{
     font-weight: 500;
     text-align: center;
     color: #29475f;
-    margin: 2rem 0 1.1rem 0;
+    margin: 0 0 1.1rem 0;
 }
 h2{
     font-size: 1.5rem;
@@ -121,7 +127,6 @@ li::before{
     background-size: contain;
 }
 .buy{
-    border: 0.1rem #457393 solid;
     width: 80%;
     border-radius: 1rem;
     height: 3rem;
@@ -137,12 +142,14 @@ li::before{
     align-items: center;
     width: 100%;
     position: relative;
-    margin: 10vh 0 0 0; 
 }
 .photoContent{
     width: 36%;
     margin: 0 auto;
     order: 1;
+}
+.title{
+    order: 4;
 }
 .start{
     width: 6rem;
@@ -151,10 +158,7 @@ li::before{
 	border-radius: 10%;
     cursor: pointer;
     position: relative;
-    border: 0.2rem #29475f solid;
-    order: 4;
-    margin-top: 1rem;
-    margin-bottom: 3rem;
+    order: 5;
 }
 .start::after{
     content: '';
@@ -175,14 +179,11 @@ li::before{
     font-weight: 700;
     position: absolute;
     color: white;
-    top: 18rem;
+    top: 27%;
     order: 2;
     text-shadow: 0.3rem 0.3rem 0.5rem black;
     animation: show 1s;
     text-align: center;
-}
-.line1::after{
-    content: ':';
 }
 .line2{
     font-size: 2rem;
@@ -190,7 +191,7 @@ li::before{
     font-weight: 600;
     order: 3;
     min-height: 16rem;
-    width: 36%;
+    width: 34%;
     margin: 3rem 0 0 0;
     animation: show 1s;
     text-align: center;
@@ -199,12 +200,11 @@ li::before{
 .portrait{
     height: 10rem;
     width: 10rem;
-    margin: 2.5rem 2rem 2rem 0;
+    margin: 2rem 2rem 0 0;
 }
 .team{
     display: flex;
     flex-direction: column;
-    margin: 4rem 0 4rem 0;
 }
 .person{
     display: flex;
@@ -213,12 +213,16 @@ li::before{
     justify-content: center;
     margin: 0 0 2rem 0;
 }
+.last{
+    margin: 0 0 0 0;
+}
 .about{
     color: #29475f;
     text-align: left;
     font-size: 1.5rem;
     width: 60%;
     line-height: 2rem;
+    margin: 2rem 0 0 0;
 }
 .instagram{
     display: flex;
@@ -248,8 +252,9 @@ li::before{
     justify-content: center;
     align-items: center;
     background: white;
-    width: 90%;
+    width: 80%;
     margin: 0 auto 2rem auto;
+    padding: 2rem;
     border-radius: 1rem;
     box-shadow: 0.1rem 0.1rem 1rem;
 }
@@ -261,7 +266,7 @@ form{
     width: 90%;
 }
 input, textarea{
-    width: 90%;
+    width: 95%;
     height: 2.5rem;
     border-radius: 1rem;
     border: 0.2rem #c7b29b solid;
@@ -283,7 +288,6 @@ textarea{
     border-radius: 1rem;
     margin: 1rem 0 2rem 0;
     height: 2.5rem;
-    border: 0.1rem #457393 solid;
     font-family: 'Play', sans-serif;
     font-weight: 600;
     color: #c7b29b;
@@ -296,7 +300,37 @@ textarea{
     0% { opacity: 0;}
     100% { opacity: 1;}
 }
+@media only screen and (max-width: 1500px){
+    .photoContent{
+        width: 50%;
+    }
+    .line2{
+        font-size: 1.8rem;
+        width: 45%;
+    }
+}
+@media only screen and (max-width: 1200px){
+    .photoContent{
+        width: 60%;
+    }
+    .line2{
+        font-size: 1.8rem;
+        width: 55%;
+    }
+}
+@media only screen and (max-width: 1000px){
+    .photoContent{
+        width: 80%;
+    }
+    .line2{
+        font-size: 1.8rem;
+        width: 75%;
+    }
+}
 @media only screen and (max-width: 850px){
+    .before{
+        height: 6rem;
+    }
     .hamburger{
         display: block;
         width: 4rem;
@@ -315,7 +349,7 @@ textarea{
     .hamburger::after{
         top: 35%
      }
-     .hamburger::before{
+    .hamburger::before{
          top: 55%;
      }
     .clouse::after{
@@ -333,7 +367,7 @@ textarea{
         position: absolute;
         background: white;
         opacity: 0.9;
-        top: 90%;
+        top: 85%;
         padding: 2rem;
         border-radius: 1rem;
         right: -50rem;
@@ -344,9 +378,6 @@ textarea{
     }
     nav{
         height: 6rem;
-    }
-    .content{
-        margin: 6rem 0 0 0; 
     }
     .line1{
         font-size: 2.8rem;

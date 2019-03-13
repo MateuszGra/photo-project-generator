@@ -1,7 +1,13 @@
 (function() {
     const hamburger = document.querySelector('.hamburger');
     const background = document.querySelector('.background');
-    const body = document.querySelector("body");
+    const body = document.querySelector('body');
+    const link = [
+        document.querySelector('.link1'),
+        document.querySelector('.link2'),
+        document.querySelector('.link3'),
+        document.querySelector('.link4'),
+    ];
 
     const button = document.querySelector('.start');
     const content = document.querySelector('.content');
@@ -111,7 +117,19 @@
         hamburger.classList.remove('clouse');
         background.classList.remove('show');
     },false)
-
+    
+    for(let i=0; i<link.length; i++){
+        link[i].addEventListener("click", function(e) {
+            e.stopPropagation();  
+            hamburger.classList.remove('clouse');
+            background.classList.remove('show');
+        },false)
+        link[i].addEventListener("touch", function(e) {
+            e.stopPropagation();  
+            hamburger.classList.remove('clouse');
+            background.classList.remove('show');
+        },false)
+    }
  //scroll
  $(document).ready(function() {
     $('a[href^="#"]').on('click', function(event) {
