@@ -293,20 +293,6 @@ textarea{
     font-weight: 600;
     color: #c7b29b;
 }
-footer{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 10vh;
-    min-height: 6rem;
-    background: #29475f;
-}
-.right{
-    color: white;
-    font-size: 1.5rem;
-    margin: 0 2rem 0 0;
-}
 .share{
     display: block;
     position: fixed;
@@ -368,12 +354,12 @@ footer{
     bottom: 0.5rem;
     right: 0.5rem;
 }
-.facebook::after{
+.facebook::after,.facebook2::after {
     background: url(img/facebook.svg);
     background-repeat: no-repeat;
     background-size: cover;
 }
-.twitter::after{
+.twitter::after, .twitter2::after{
     background: url(img/twitter.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -382,7 +368,42 @@ footer{
     bottom: 1rem;
     right: 1rem;
 }
-
+footer{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10vh;
+    min-height: 6rem;
+    background: #29475f;
+}
+.right{
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 5% 0 0;
+}
+.share2{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 8.5rem;
+    margin: 0 0 0 5%;
+}
+.facebook2, .twitter2{
+    display: block;
+    height: 4rem;
+    width: 4rem;
+    background: #c7b29b;
+    border-radius: 50%;
+}
+.facebook2::after, .twitter2::after{
+    content: '';
+    display: block;
+    width: 80%;
+    height: 80%;
+    margin: 0.3rem 0 0 0.4rem;
+}
 
 @keyframes rotate {
     0% { transform: rotate(0deg);}
@@ -486,5 +507,13 @@ footer{
     }
     .payment{
         flex-direction: column;
+    }
+}
+@media only screen and (max-width: 350px){
+    .right{
+        margin: 0 2% 0 0;
+    }
+    .share2{
+        margin: 0 0 0 2%;
     }
 }
