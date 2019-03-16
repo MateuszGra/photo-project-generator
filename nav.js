@@ -90,7 +90,7 @@
         twitter.classList.toggle('none');
     },false)
     body.addEventListener("click", function(e) {
-        facebook.classList.remove('none');
-        twitter.classList.remove('none');
+        facebook.classList.add('none');
+        twitter.classList.add('none');
     },false)
 })();
