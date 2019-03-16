@@ -10,13 +10,13 @@ body{
     height: 10vh;
     min-height: 6rem;
 }
-button{
+.buy, .submit{
     cursor: pointer;
     background: #457393;
     transition: 0.3s;
     border: 0.1rem #29475f solid;
 }
-button:hover{    
+.buy:hover, .submit:hover{    
     background: #2f88a7;
 }
 nav{
@@ -154,6 +154,7 @@ li::before{
 .start{
     width: 6rem;
     height: 6rem;
+    background: #457393;
     display: block;
 	border-radius: 10%;
     cursor: pointer;
@@ -292,6 +293,97 @@ textarea{
     font-weight: 600;
     color: #c7b29b;
 }
+footer{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10vh;
+    min-height: 6rem;
+    background: #29475f;
+}
+.right{
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 2rem 0 0;
+}
+.share{
+    display: block;
+    position: fixed;
+    height: 8rem;
+    width: 8rem;
+    bottom: 10rem;
+    right: 5rem;
+    cursor: pointer;
+}
+.cover{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #c7b29b;
+    border-radius: 50%;
+    box-shadow: 0.1rem 0.1rem 1rem;
+    z-index: 99;
+}
+.share::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background: url(img/share.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 1rem;
+    right: 0.5rem;
+    transform: rotate(180deg);
+    z-index: 99;
+}
+.facebook, .twitter{
+    display: block;
+    height: 5rem;
+    width: 5rem;
+    background: #c7b29b;
+    border-radius: 50%;
+    position: absolute;
+    transition: 0.4s;
+    box-shadow: 0.1rem 0.1rem 1rem black;
+}
+.facebook{
+    bottom: 5rem;
+    right: 8rem;
+}
+.twitter{
+    bottom: -2rem;
+    right: 8rem;
+}
+.facebook::after, .twitter::after{
+    content: '';
+    display: block;
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+}
+.facebook::after{
+    background: url(img/facebook.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.twitter::after{
+    background: url(img/twitter.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.none{
+    bottom: 1rem;
+    right: 1rem;
+}
+
+
 @keyframes rotate {
     0% { transform: rotate(0deg);}
     100% { transform: rotate(360deg);}
@@ -316,6 +408,9 @@ textarea{
     .line2{
         font-size: 1.8rem;
         width: 55%;
+    }
+    .share{
+        display: none;
     }
 }
 @media only screen and (max-width: 1000px){
