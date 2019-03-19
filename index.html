@@ -13,7 +13,6 @@
     <nav>
         <a href="#gen" class="logo">
             <img class="image" src="img/logo.svg">
-            <figure class="name">GPF</figure>
         </a>
         <div class="hamburger">
             <div class="background">
@@ -24,6 +23,13 @@
             </div>
         </div> 
     </nav>
+    <div class="communique hide">
+        <div class="alert">
+            <img class="sad" src="img/sad.svg">
+            <p class="message">Złe wieści. Ten start-up nie istnieje.</p>
+            <button class="ok">OK</button>
+        </div>
+    </div>
     <figure id="gen" class="before"></figure>
     <section class="content">
         <img class="photoContent">
@@ -42,7 +48,7 @@
             <li class="yes">Najwyższa jakość.</li>
             <li class="no">Generowanie dwunastu zdjęć do projektu.</li>
             <li class="no">Indywidualne konsultacje.</li>
-            <button class="buy">KUP TERAZ</button>
+            <button class="buy buy1">KUP TERAZ</button>
         </ul>
         <ul class="premium">
             <h3>Premium:</h3>
@@ -52,7 +58,7 @@
             <li class="yes">Najwyższa jakość.</li>
             <li class="yes">Generowanie dwunastu zdjęć do projektu.</li>
             <li class="no">Indywidualne konsultacje.</li>
-            <button class="buy">KUP TERAZ</button>
+            <button class="buy buy2">KUP TERAZ</button>
         </ul>
         <ul class="diament">
             <h3>Diamond:</h3>
@@ -62,8 +68,24 @@
             <li class="yes">Najwyższa jakość.</li>
             <li class="yes">Generowanie dwunastu zdjęć do projektu.</li>
             <li class="yes">Indywidualne konsultacje.</li>
-            <button class="buy">KUP TERAZ</button>
+            <button class="buy buy3">KUP TERAZ</button>
         </ul>
+    </section>
+    <section class="apps">
+            <div class="store store1">
+                <img class="google" src="img/google.svg">
+                <div class="text">
+                    <p class="download">POBIERZ Z</p>
+                    <p class="shop">Google Play</p>
+                </div>
+            </div>
+            <div class="store store2">
+                    <img class="apple" src="img/apple.svg">
+                    <div class="text">
+                        <p class="download">POBIERZ Z</p>
+                        <p class="appleShop">App Store</p>
+                    </div>
+            </div>
     </section>
     <figure id="team" class="before"></figure>
     <h1>Zespół</h1>
@@ -100,16 +122,22 @@
     </section>
     <figure id="contact" class="before"></figure>
     <section class="contact">
-        <h1>Napisz do nas.</h1>
-        <form>
+        <div class="form">        
+            <h1>Napisz do nas.</h1>
             <label for="name" class="name2">Imię</label>
             <input type=”text” name="name">
             <label for="email" class="email">E-mail</label>
             <input type="email" name="email" id="email">
             <label for="message" class="Wiadomość">Wiadomość</label>
             <textarea name="message" id="message"></textarea>
-            <button class="submit">Wyślij</button>
-        </form>
+            <button class="submit submit1">Wyślij</button>
+        </div>
+        <div class="form newsletter">
+            <h1>Zapisz się do newslettera</h1>
+            <label for="email" class="email">E-mail</label>
+            <input type="email" name="email" id="email">
+            <button class="submit submit2">Wyślij</button>
+        </div>
     </section>
     <div class="share">
         <div class="cover"></div>

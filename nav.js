@@ -11,6 +11,17 @@
     const share = document.querySelector('.share');
     const facebook = document.querySelector('.facebook');
     const twitter = document.querySelector('.twitter');
+    const fake = [
+        document.querySelector('.buy1'),
+        document.querySelector('.buy2'),
+        document.querySelector('.buy3'),
+        document.querySelector('.store1'),
+        document.querySelector('.store2'),
+        document.querySelector('.submit1'),
+        document.querySelector('.submit2'),
+    ];
+    const communique = document.querySelector('.communique');
+    const ok = document.querySelector('.ok');
     
 //menu
     hamburger.addEventListener("click", function(e) {
@@ -92,5 +103,20 @@
     body.addEventListener("click", function(e) {
         facebook.classList.add('none');
         twitter.classList.add('none');
+    },false)
+    //fake window
+    for(let i=0; i<fake.length; i++){
+        fake[i].addEventListener("click", function(e) {
+            communique.classList.remove('hide');
+        },false)
+        fake[i].addEventListener("touch", function(e) {
+            communique.classList.remove('hide');
+        },false)
+    }
+    ok.addEventListener("click", function(e) {
+        communique.classList.add('hide');
+    },false)
+    ok.addEventListener("touch", function(e) {
+        communique.classList.add('hide');
     },false)
 })();

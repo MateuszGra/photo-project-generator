@@ -10,13 +10,14 @@ body{
     height: 10vh;
     min-height: 6rem;
 }
-.buy, .submit{
+.buy, .submit, .ok{
     cursor: pointer;
     background: #457393;
     transition: 0.3s;
     border: 0.1rem #29475f solid;
+    font-family: 'Play', sans-serif;
 }
-.buy:hover, .submit:hover{    
+.buy:hover, .submit:hover, .ok:hover{    
     background: #2f88a7;
 }
 nav{
@@ -30,7 +31,7 @@ nav{
     width: 100%;
     box-shadow: 0.1rem 0.1rem 1rem;
     background: white;
-    z-index: 999;
+    z-index: 9999;
     top: 0;
 }
 .logo{
@@ -59,6 +60,51 @@ nav{
 }
 .backgroundEl:hover{
     color: #457393;
+}
+.communique{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    top: 30%;
+    z-index: 999;
+    animation: show 0.3s;
+}
+.hide{
+    display: none;
+}
+.alert{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 40rem;
+    height: 20rem;
+    max-width: 90%;
+    background: white;
+    border-radius: 2rem;
+    border: 0.2rem #29475f solid;
+    box-shadow: 0.1rem 0.1rem 1rem;
+    padding-right: 1rem;
+    transition: 1s;
+}
+.sad{
+    width: 6rem;
+    margin: 5rem 0 0 1rem;
+}
+.message{
+    font-size: 2rem;
+    margin: 7rem 0 0 1rem;
+}
+.ok{
+    display: block;
+    position: absolute;
+    width: 4rem;
+    height: 3.5rem;
+    bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #c7b29b;
+    border-radius: 1rem;
 }
 .payment{
     display: flex;
@@ -130,11 +176,57 @@ li::before{
     width: 80%;
     border-radius: 1rem;
     height: 3rem;
-    font-family: 'Play', sans-serif;
     font-weight: 600;
     color: #c7b29b;
     margin: 2rem 0 0 2.5rem;
 }
+.apps{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0 0 0;
+}
+.store{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22rem;
+    height: 8rem;
+    margin: 1rem 1rem 1rem 1rem;
+    background: black;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.google, .apple{
+    display: block;
+    height: 5rem;
+}
+.google{
+    margin: 0 1rem 0 0.5rem;
+}
+.apple{
+    margin: 0 2rem 0 1rem;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shop{
+    font-size: 2.5rem;
+}
+.appleShop{
+    font-size: 2.8rem;
+}
+.download{
+    align-self: flex-start;
+    font-size: 1.2rem;
+}
+
 .content{
     display: flex;
     flex-direction: column;
@@ -247,7 +339,11 @@ li::before{
     background-repeat: no-repeat;
     background-size: cover;
 }
-.contact{
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -258,13 +354,6 @@ li::before{
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: 0.1rem 0.1rem 1rem;
-}
-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
 }
 input, textarea{
     width: 95%;
@@ -289,7 +378,6 @@ textarea{
     border-radius: 1rem;
     margin: 1rem 0 2rem 0;
     height: 2.5rem;
-    font-family: 'Play', sans-serif;
     font-weight: 600;
     color: #c7b29b;
 }
@@ -507,6 +595,15 @@ footer{
     }
     .payment{
         flex-direction: column;
+    }
+    .apps{
+        flex-direction: column;
+    }
+    .sad{
+        margin: 4.5rem 0 0 1rem;
+    }
+    .message{
+        margin: 5.5rem 0 0 1rem;
     }
 }
 @media only screen and (max-width: 350px){
