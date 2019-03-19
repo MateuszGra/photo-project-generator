@@ -10,11 +10,11 @@ body{
     height: 10vh;
     min-height: 6rem;
 }
-.buy, .submit, .ok{
+.buy, .submit, .ok, .start{
     cursor: pointer;
-    background: #457393;
+    background: #29475f;
     transition: 0.3s;
-    border: 0.1rem #29475f solid;
+    border: 0.1rem black solid;
     font-family: 'Play', sans-serif;
 }
 .buy:hover, .submit:hover, .ok:hover{    
@@ -94,6 +94,7 @@ nav{
 .message{
     font-size: 2rem;
     margin: 7rem 0 0 1rem;
+    color: #29475f;
 }
 .ok{
     display: block;
@@ -246,7 +247,6 @@ li::before{
 .start{
     width: 6rem;
     height: 6rem;
-    background: #457393;
     display: block;
 	border-radius: 10%;
     cursor: pointer;
