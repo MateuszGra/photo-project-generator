@@ -8,6 +8,7 @@ body{
 .before{
     display: block;
     height: 10vh;
+    max-height: 8rem;
     min-height: 6rem;
 }
 .buy, .submit, .ok, .start{
@@ -28,6 +29,7 @@ nav{
     position: fixed;
     height: 10vh;
     min-height: 6rem;
+    max-height: 8rem;
     width: 100%;
     box-shadow: 0.1rem 0.1rem 1rem;
     background: white;
@@ -154,7 +156,7 @@ li{
     width: 100%;
     font-size: 1.5rem;
     font-weight: 500;
-    margin: 0.2rem;
+    margin: 0.2rem; 
 }
 li::before{
     content: '';
@@ -199,7 +201,7 @@ li::before{
     border-radius: 1rem;
     cursor: pointer;
 }
-.google, .apple{
+.google, .apple, .microsoft{
     display: block;
     height: 5rem;
 }
@@ -208,6 +210,9 @@ li::before{
 }
 .apple{
     margin: 0 2rem 0 1rem;
+}
+.microsoft{
+    margin: 0 1.2rem 0 0;
 }
 .text{
     display: flex;

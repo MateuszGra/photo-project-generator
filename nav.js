@@ -17,6 +17,7 @@
         document.querySelector('.buy3'),
         document.querySelector('.store1'),
         document.querySelector('.store2'),
+        document.querySelector('.store3'),
         document.querySelector('.submit1'),
         document.querySelector('.submit2'),
     ];
