@@ -468,6 +468,7 @@ footer{
     justify-content: space-between;
     height: 10vh;
     min-height: 6rem;
+    max-height: 8rem;
     background: #29475f;
 }
 .right{
@@ -586,6 +587,9 @@ footer{
         right: 0;
     }
     nav{
+        height: 6rem;
+    }
+    footer{
         height: 6rem;
     }
     .line1{
