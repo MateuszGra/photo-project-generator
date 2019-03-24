@@ -176,12 +176,13 @@ li::before{
     background-size: contain;
 }
 .buy{
+    display: block;
     width: 80%;
     border-radius: 1rem;
     height: 3rem;
     font-weight: 600;
     color: #c7b29b;
-    margin: 2rem 0 0 2.5rem;
+    margin: 2.5rem auto 1rem auto;
 }
 .apps{
     display: flex;
@@ -303,6 +304,8 @@ li::before{
 .team{
     display: flex;
     flex-direction: column;
+    width: 70%;
+    margin: 0 auto 0 auto;
 }
 .person{
     display: flex;
@@ -344,11 +347,11 @@ li::before{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.contact{
+    width: 60%;
+    margin: 0 auto 0 auto;
+}
 .form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -379,7 +382,7 @@ textarea{
     resize: none;
 }
 .submit{
-    width: 90%;
+    width: 95%;
     border-radius: 1rem;
     margin: 1rem 0 2rem 0;
     height: 2.5rem;
@@ -527,6 +530,12 @@ footer{
     .share{
         display: none;
     }
+    .team{
+        width: 80%;
+    }
+    .contact{
+        width: 80%;
+    }
 }
 @media only screen and (max-width: 1000px){
     .photoContent{
@@ -613,6 +622,12 @@ footer{
     }
     .message{
         margin: 5.5rem 0 0 1rem;
+    }
+    .team{
+        width: 95%;
+    }
+    .contact{
+        width: 95%;
     }
 }
 @media only screen and (max-width: 350px){
