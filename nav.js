@@ -122,7 +122,7 @@
     },false)
     
     body.addEventListener("keyup", function(event) {
-        if (event.keyCode === 13 || event.keyCode === 27) {
+        if (event.code === 'Enter' || event.code === 'Escape') {
             communique.classList.add('hide');
         }
       });
