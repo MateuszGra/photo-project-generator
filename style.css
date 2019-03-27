@@ -381,6 +381,7 @@ input, textarea{
     border-radius: 1rem;
     border: 0.2rem #c7b29b solid;
     font-family: 'Play', sans-serif;
+    text-align: center;
 }
 label{
     font-weight: 500;

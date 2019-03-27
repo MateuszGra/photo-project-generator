@@ -120,4 +120,10 @@
     ok.addEventListener("touch", function(e) {
         communique.classList.add('hide');
     },false)
+    
+    body.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13 || event.keyCode === 27) {
+            communique.classList.add('hide');
+        }
+      });
 })();
