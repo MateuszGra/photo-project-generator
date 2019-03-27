@@ -21,6 +21,18 @@ body{
 .buy:hover, .submit:hover, .ok:hover{    
     background: #2f88a7;
 }
+noscript{
+    display: block;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    background: red;
+    color: white;
+    font-size: 3rem;
+    bottom: 0;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
 nav{
     display: flex;
     align-items: center;
